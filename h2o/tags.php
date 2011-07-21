@@ -431,7 +431,6 @@ class Now_Tag extends H2o_Node {
     }
     
     function render($contxt, $stream) {
-        sleep(1);
         $time = date($this->format);
         $stream->write($time);
     }
