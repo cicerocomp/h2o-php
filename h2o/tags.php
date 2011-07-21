@@ -417,7 +417,7 @@ class Debug_Tag extends H2o_Node {
         } else {
             $object = $context->scopes[0];
         }
-        $output = "<pre>". print_r($object, true). "</pre>";
+        $output = "<pre>" . htmlspecialchars( print_r($object, true) ) . "</pre>";
         $stream->write($output);
     }
 }
